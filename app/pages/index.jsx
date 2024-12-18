@@ -9,6 +9,7 @@ import footnote from 'markdown-it-footnote'
 import markdownItAnchor from 'markdown-it-anchor'
 import markdownItToc from 'markdown-it-toc-done-right'
 import markdownDeflist from 'markdown-it-deflist'
+import markdownMark from 'markdown-it-mark'
 
 import mk from './katex'
 import chart from './chart'
@@ -235,6 +236,7 @@ export default class PreviewPage extends React.Component {
           ...DEFAULT_OPTIONS.toc,
           ...toc
         })
+        .use(markdownMark)
     }
 
     // Theme already applied
